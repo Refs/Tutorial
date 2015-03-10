@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript" src="js/waterfall.js"/></script>
+
+<title></title>
+<style type="text/css">
+    *{padding: 0;margin:0;}
+    /* 我们在加载图片的时候，所有图片的位置是我们通过计算，然后通过绝对定位的方式，将其定位到其应该出现的位置； 而通过将外层main设置成相对定位；可以为内部盒子提供一个相对点 */
+    #main{
+        position: relative;
+    }
+    /* 盒子与盒子之间，推荐利用pading来将盒子之间隔开，而不是利用margin ; 因为在js中我们需要知道每一列的高度；而获取列高需要知道列中的每个数据块的高度，以及数据块之间的距离；我们要利用js offsetHeight属性；其能获取的高度是包括padding在内的高，但不包括margin边界在内；所以我们希望是通过padding拉开图片与图片之间的距离，而不是通过margin ; */
+    .pin{
+        padding: 15px 0 0 15px;
+        float:left;
+    }
+    
+    .box{
+        padding: 10px;
+        border:1px solid #ccc;
+        box-shadow: 0 0 6px #ccc;
+        border-radius: 5px;
+    }
+    /* 因为瀑布流的特点是 数据块同宽而不同高，所以此时应该将图片的宽度限定死，而将其高度设置成为auto */
+    .box img{
+        width:162px;
+        height:auto;
+    }
+</style>
+</head>
+<body>
+<div id="main">
+    <div class="pin">
+        <div class="box">
+            <img src="./images/1.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="./images/2.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="./images/3.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="./images/4.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="./images/5.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="./images/6.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="./images/7.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="./images/8.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="./images/9.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="./images/10.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="./images/11.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="./images/12.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="./images/13.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="./images/14.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="./images/15.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="./images/16.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="./images/17.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="./images/18.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="./images/19.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="./images/20.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="./images/21.jpg"/>
+        </div>
+    </div>
+</div>
+</body>
+</html>
