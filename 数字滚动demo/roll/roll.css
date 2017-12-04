@@ -1,0 +1,20 @@
+
+#total {
+    font-size: 20px;
+    height: 40px;
+    line-height: 40px;
+    margin: 80px auto 20px;
+    width: 500px;
+}
+#total .t_num {
+    display: inline-block;
+    line-height: 13px;
+    margin: 2px 4px 0;
+}
+#total .t_num i {
+    background:   url(number.png) no-repeat scroll 0 0;
+    display: inline-block;
+    height: 23px;
+    text-indent: -999em;
+    width: 15px;
+}

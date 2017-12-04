@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript" src="jquery.min.js"></script> 
+<script type="text/javascript" src="animateBackground-plugin.js"></script> 
+<link rel="stylesheet" type="text/css" href="roll.css">
+
+</head>
+
+<div id="total"> 
+   <span class="t_num"></span>
+</div> 
+<script type="text/javascript">
+var num = '5456456.654564';
+function show_num(n){ 
+    var it = $(".t_num i"); 
+    var len = strlen(n+''); 
+
+    for(var i=0;i<len;i++){ 
+        if(it.length<=i){ 
+            $(".t_num").append("<i></i>"); 
+        } 
+        var num=String(n).charAt(i); 
+		if(num=='.')
+			var y = -300;
+		else
+        	var y = -parseInt(num)*30; //y轴位置 
+        var obj = $(".t_num i").eq(i); 
+        obj.animate({ //滚动动画
+            backgroundPosition :'(0 '+String(y)+'px)'  
+            }, 'slow','swing',function(){} 
+        ); 
+    } 
+} 
+
+function getdata(){ 
+    /*$.ajax({ 
+        url: 'data.php', 
+        type: 'POST', 
+        dataType: "json", 
+        cache: false, 
+        timeout: 10000, 
+        error: function(){}, 
+        success: function(data){ 
+            show_num(data.count); 
+        } 
+       }); */
+	   num = parseFloat(num) + 1;
+	   show_num(num);
+} 
+$(function(){ 
+    getdata(); 
+    setInterval('getdata()', 3000);//每隔3秒执行一次 
+}); 
+
+function strlen(str){
+    var len = 0;
+    for (var i=0; i<str.length; i++) {
+     var c = str.charCodeAt(i);
+    //单字节加1
+     if ((c >= 0x0001 && c <= 0x007e) || (0xff60<=c && c<=0xff9f)) {
+       len++;
+     }
+     else {
+      len+=2;
+     }
+    }
+    return len;
+}
+</script>
+
+<body>
+</body>
+</html>
