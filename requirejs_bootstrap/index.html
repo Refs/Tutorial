@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>require.js小demo</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="css/base.css"> -->
+    <!-- 加载require.js文件，也可能造成网页失去响应。解决办法有两个，一个是把它放在网页底部加载，另一个是写成下面这样： -->
+    <!-- <script src="js/require.js" defer async="true" ></script> -->
+    <!--async属性表明这个文件需要异步加载，避免网页失去响应。IE不支持这个属性，只支持defer，所以把defer也写上。  -->
+    <!-- 加载require.js以后，下一步就要加载我们自己的代码了。假定我们自己的代码文件是main.js，也放在js目录下面。只需要写成下面这样就行了： -->
+    <!-- <script src="js/require.js" data-main="src/main.js"></script> -->
+    <script type="text/javascript" data-main="js/app" src="js/lib/require.js"></script>
+</head>
+
+<body>
+    <div class="view-container"></div>
+</body>
+
+</html>
