@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>dh-data-view</title>
+  <!-- Bootstrap -->
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!-- hack -->
+  <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <!-- 导入 自己的css -->
+  <link rel="stylesheet" type="text/css" href="css/base.css">
+  <!-- 导入 index.css -->
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <style>
+
+  </style> 
+</head>
+
+<body>
+  <!-- main start -->
+  <div id="main">
+  </div>
+  <!-- main end -->
+
+  <!-- header start -->
+  <div id="header">
+    <div class="header-title clearfix">
+      <div class="title-left pull-left"></div>
+      <div class="title-center pull-left">
+        大恒光伏智能云平台
+      </div>
+      <div class="title-right pull-right"></div>
+    </div>
+    <div class="header-divide"></div>
+    <div class="header-content">
+      <div class="content-left pull-left">
+        <div class="content-left-title">
+          今日总发电量
+        </div>
+        <div class="content-left-main">
+          <span class="main-text-left">
+            232425
+          </span>
+          <span class="main-text-right">
+            KW·h
+          </span>
+        </div>
+      </div>
+      <div class="content-right pull-right">
+        <div class="content-right-title">
+          今日发电总功率
+        </div>
+        <div class="content-right-main">
+          <span class="main-text-left">
+            232425
+          </span>
+          <span class="main-text-right">
+            KW
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- header start -->
+
+  <!-- main-left start -->
+  <div id="main-left">
+    <div class="left-top">
+      <div class="left-top-title">
+        我是饼状图
+      </div>
+      <div class="left-top-main" id="leftTopDoughnut"></div>
+    </div>
+    <div class="left-center">
+      <div class="left-center-title">
+        我是混合柱状图折线图
+      </div>
+      <div class="left-center-main" id="leftCenterMixBarLine"></div>
+    </div>
+
+    <div class="left-bottom">
+      <div class="left-bottom-title">
+        我是面积图
+      </div>
+      <div class="left-bottom-main" id="leftBottomAreaLine"></div>
+    </div>
+  </div>
+  <!-- main-left end -->
+
+  <!-- main-right start -->
+  <div id="main-right">
+    <div class="right-top">
+      <div class="right-top-title">
+        我是堆叠柱形图
+      </div>
+      <div class="right-top-main" id="rightTopBar"></div>
+    </div>
+    <div class="right-center">
+      <div class="right-center-title">
+        我是南丁格尔玫瑰图
+      </div>
+      <div class="right-center-main" id="rightCenterPie"></div>
+    </div>
+    <div class="right-bottom">
+        <div class="right-bottom-title">
+            我是垂直柱状图
+          </div>
+        <div class="right-bottom-main" id="rightBottomBar"></div>
+    </div>
+  </div>
+  <!-- main-right end -->
+
+  <!-- footer start -->
+  <div id="footer" class="row">
+    <div class="footer-first col-xs-3">
+      <div class="footer-content">
+        <div class="content-left col-xs-4">
+          <span class="dh-font dh-eryanghuatan"></span>
+        </div>
+        <div class="content-right col-xs-8">
+          <span>9.8</span>
+          万吨
+        </div>
+      </div>
+      <div class="footer-divide"></div>
+
+      <div class="footer-title">
+        二氧化碳
+      </div>
+    </div>
+    <div class="footer-second col-xs-3">
+      <div class="footer-content">
+        <div class="content-left col-xs-4">
+          <span class="dh-font dh-licheng1"></span>
+        </div>
+        <div class="content-right col-xs-8">
+          <span>8.54</span>
+          亿公里
+        </div>
+      </div>
+      <div class="footer-divide"></div>
+
+      <div class="footer-title">
+        汽车里程
+      </div>
+    </div>
+    <div class="footer-third col-xs-3">
+      <div class="footer-content">
+        <div class="content-left col-xs-4">
+          <span class="dh-font dh-eryanghualiu"></span>
+        </div>
+        <div class="content-right col-xs-8">
+          <span>2749.68</span>
+          吨
+        </div>
+      </div>
+      <div class="footer-divide"></div>
+
+      <div class="footer-title">
+        二氧化硫
+      </div>
+    </div>
+    <div class="footer-fourth col-xs-3">
+      <div class="footer-content">
+        <div class="content-left col-xs-4">
+          <span class="dh-font dh-gushumingmu"></span>
+        </div>
+        <div class="content-right col-xs-8">
+          <span>535.8</span>
+          棵
+        </div>
+      </div>
+      <div class="footer-divide"></div>
+
+      <div class="footer-title">
+        等效植树
+      </div>
+    </div>
+  </div>
+  <!-- footer end -->
+
+  <!-- screenButton start -->
+  <div id="screenFull">
+    <span class="dh-font dh-quanping1"></span>
+  </div>
+  <!-- screenButton end -->
+</body>
+
+</html>
+<script src="./echarts-2.2.7/build/dist/echarts.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=b8vNnG37iSv0j3r5eLSHhHHIGG9GmngU"></script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="bootstrap/js/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="./bootstrap/js/screenfull.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="./js/index.js"></script>
+<script type="text/javascript">
+  //切换全屏
+  $('#screenFull').click(function () {
+    screenfull.toggle();
+  });
+</script>
+
+
