@@ -189,6 +189,8 @@
                 }
             ]
         });
+
+
         option = {
             color: ['gold', 'aqua', 'lime'],
             tooltip: {
@@ -491,6 +493,7 @@
                 }
             }, ]
         };
+        
         var myChart = BMapExt.initECharts(container);
         window.onresize = myChart.onresize;
         // myChart.showLoading({
